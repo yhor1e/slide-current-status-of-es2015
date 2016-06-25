@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>current of es2015</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../node_modules/talkiejs/dist/talkie.min.css">
+    <link rel="stylesheet" href="../node_modules/talkiejs/dist/talkie-default.min.css">
+    <link rel="stylesheet" href="../node_modules/highlight.js/styles/dark.css">
+  </head>
+  <body>
+    <template layout="cover" type="text/x-markdown"># ES2015 の現状
+
+      2016-06-27
+      Yuki HORIE</template>
+    <template layout="bullets" type="text/x-markdown">## ES ( ECMA Script )
+
+ * JavaScript の仕様  
+ * 昨年 **ES2015** がリリース  
+ * 毎年リリースされていく方針となり、2016-06-14 に **ES2016** がリリースされた</template>
+
+<template layout="bullets" type="text/x-markdown">## ES2015 のブラウザの実装状況
+Edge・Firefox など多くのブラウザで実装が進み、Chrome 51 ではほぼすべての機能が実装された
+
+ref:
+[https://kangax.github.io/compat-table/es6/](https://kangax.github.io/compat-table/es6/)
+</template>
+
+<template layout="cover" type="text/x-markdown">
+## これまで
+**ES2015** を使用するには、Babel などで すべてのブラウザで動作する **ES5** へのトランスパイルする必要があった
+
+ref:
+[https://github.com/babel/babel](https://github.com/babel/babel)  
+
+</template>
+
+<template layout="code" type="text/x-markdown">## これから
+
+Allow Function
+
+Spread Operator</template>
+
+<template layout="bullets" type="text/x-markdown">## ほぼ
+
+> Chrome 51 では、**「ほぼ」** すべての機能が実装された
+
+モジュール機能が実装されていない
+</template>
+
+<template layout="cover" type="text/x-markdown">## 現状
+  様々なブラウザで実装中
+
+  *
+  *
+  
+</template>
+
+<template layout="cover" type="text/x-markdown">## どうするのか  
+  モジュール機能は、まだライブラリの力を借りる必要がある
+
+  その際、[Babel](https://babeljs.io/) でトランスパイラするのではなく、
+  モジュール機能に特化した [rollup](https://github.com/rollup/rollup) など、
+  シンプルなものを使える
+</template>
+
+<template layout="bullets" type="text/x-markdown">## 一緒に JavaScript しましょう  
+
+* ES2015 書きたいけどよくわからない  
+* JavaScript 書きたいけど 周辺のエコシステムがよくわからない  
+* Grunt, Gulp, npm scripts とかなにをどうすればいいかわからない
+* とにかく、よくわからない
+
+そういう方は、ぜひ、お声かけください
+  
+</template>
+    <script src="../node_modules/talkiejs/dist/talkie.min.js"></script>
+    <script src="../node_modules/highlight.js/lib/highlight.js"></script>
+    <script>Talkie();</script>
+  </body>
+</html>
