@@ -13,7 +13,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "highlight.js": "^9.4.0",
     "talkiejs": "^0.7.4"
   }
 }

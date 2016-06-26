@@ -1,35 +1,34 @@
-<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>current of es2015</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="../node_modules/talkiejs/dist/talkie.min.css">
     <link rel="stylesheet" href="../node_modules/talkiejs/dist/talkie-default.min.css">
-    <link rel="stylesheet" href="../node_modules/highlight.js/styles/dark.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/monokai_sublime.min.css">
+
+
   </head>
   <body>
-    <template layout="cover" type="text/x-markdown"># ES2015 の現状
+<template layout="cover" type="text/x-markdown"># ES2015
 
-      2016-06-27
-      Yuki HORIE</template>
-    <template layout="bullets" type="text/x-markdown">## ES ( ECMA Script )
+2016-06-27  
+Yuki HORIE</template>
+<template layout="bullets" type="text/x-markdown">## ES ( ECMA Script )
 
- * JavaScript の仕様  
- * 昨年 **ES2015** がリリース  
- * 毎年リリースされていく方針となり、2016-06-14 に **ES2016** がリリースされた</template>
+* JavaScript の仕様  
+* 昨年 **ES2015** がリリース  
+* 毎年リリースされていく方針となり、2016-06-14 に **ES2016** がリリースされた</template>
 
-<template layout="bullets" type="text/x-markdown">## ES2015 のブラウザの実装状況
+<template style="color: #f0f0f0" layout="bullets" type="text/x-markdown" backface="./image/compat-table.png" backface-filter="blur(1px) brightness(.4)">## ES2015 のブラウザの実装状況
 Edge・Firefox など多くのブラウザで実装が進み、Chrome 51 ではほぼすべての機能が実装された
 
 ref:
 [https://kangax.github.io/compat-table/es6/](https://kangax.github.io/compat-table/es6/)
 </template>
 
-<template layout="cover" type="text/x-markdown">
+<template style="color: #f0f0f0" layout  type="text/x-markdown" backface="./image/babel.png" backface-filter="blur(1px) brightness(.4)">
 ## これまで
 **ES2015** を使用するには、Babel などで すべてのブラウザで動作する **ES5** へのトランスパイルする必要があった
 
@@ -38,11 +37,39 @@ ref:
 
 </template>
 
-<template layout="code" type="text/x-markdown">## これから
+<template layout type="text/x-markdown">## いま
 
-Allow Function
+トランスパイルをすることなく動作する
 
-Spread Operator</template>
+気軽に書いていきましょう  
+
+</template>
+
+<template layout="code" type="text/x-markdown">## ES2015 (Class)
+
+  
+```javascript
+let bar = new (class Foo {
+
+  constructor(a) {
+    this.a = a
+  }
+
+  getA() {
+    console.log(this.a)
+  }
+})('bar')
+
+bar.getA()  // 'bar'
+```</template>  
+
+
+<template layout="code" type="text/x-markdown">## ES2015 ( Spread Operator )
+  
+```javascript
+let numbers = [2, 4, 20, 43, 50, 23]
+console.log(Math.max(...numbers))  // 50 
+```</template>  
 
 <template layout="bullets" type="text/x-markdown">## ほぼ
 
@@ -51,34 +78,35 @@ Spread Operator</template>
 モジュール機能が実装されていない
 </template>
 
-<template layout="cover" type="text/x-markdown">## 現状
-  様々なブラウザで実装中
+<template layout  type="text/x-markdown">## 現状
+様々なブラウザで実装中
 
-  *
-  *
+### Edge
+> Modules (ES6)In Development  [(ref)](https://developer.microsoft.com/en-us/microsoft-edge/platform/status/moduleses6)
+
+### Chromium
+> Chromium has already started implementing this new tag, and module support will be available soon  [(ref)](http://blog.chromium.org/2016/04/es6-es7-in-browser.html)
   
 </template>
 
-<template layout="cover" type="text/x-markdown">## どうするのか  
-  モジュール機能は、まだライブラリの力を借りる必要がある
+<template layout type="text/x-markdown">## どうするのか  
+モジュール機能は、まだライブラリの力を借りる必要がある
 
-  その際、[Babel](https://babeljs.io/) でトランスパイラするのではなく、
-  モジュール機能に特化した [rollup](https://github.com/rollup/rollup) など、
-  シンプルなものを使える
+その際、[Babel](https://babeljs.io/) でトランスパイラするのではなく、
+モジュール機能に特化した [rollup](https://github.com/rollup/rollup) など、
+シンプルなものを使える
 </template>
 
-<template layout="bullets" type="text/x-markdown">## 一緒に JavaScript しましょう  
+<template layout type="text/x-markdown">## ES2015 を気軽に書きましょう
 
-* ES2015 書きたいけどよくわからない  
-* JavaScript 書きたいけど 周辺のエコシステムがよくわからない  
-* Grunt, Gulp, npm scripts とかなにをどうすればいいかわからない
-* とにかく、よくわからない
+* IE では `let`、`const` くらいしか動作しませんが
 
-そういう方は、ぜひ、お声かけください
-  
 </template>
+
+<template layout="cover" type="text/x-markdown">## END</template>
+
     <script src="../node_modules/talkiejs/dist/talkie.min.js"></script>
-    <script src="../node_modules/highlight.js/lib/highlight.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
     <script>Talkie();</script>
   </body>
 </html>
