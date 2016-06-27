@@ -91,7 +91,7 @@ console.log(Math.max(...numbers))  // 50
 </template>
 
 <template layout type="text/x-markdown">## どうするのか  
-モジュール機能は、まだライブラリの力を借りる必要がある
+少なくともモジュール機能は、まだライブラリの力を借りる必要がある
 
 その際、[Babel](https://babeljs.io/) でトランスパイラするのではなく、
 モジュール機能に特化した [rollup](https://github.com/rollup/rollup) など、
@@ -100,8 +100,8 @@ console.log(Math.max(...numbers))  // 50
 
 <template layout type="text/x-markdown">## ES2015 を気軽に書きましょう
 
-* ただし、IE では `let`、`const` くらいしか動作しません
-* また、ブラウザが限定できない場合は、やはり Babel を使いましょう
+* 動作保証ブラウザの ES2015 の実装が進んでいる場合は気軽に書きましょう
+* ただし、ブラウザが限定できない場合は、やはり Babel を使いましょう
 
 </template>
 
